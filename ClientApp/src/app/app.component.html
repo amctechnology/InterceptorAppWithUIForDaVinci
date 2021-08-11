@@ -1,0 +1,23 @@
+<div class="root" *ngIf="isVisible">
+
+  <div class="centered">
+    <h1>INTER |C| EPTOR</h1>
+    <div>
+      <select name="operation-selector" id="op-select" [(ngModel)]="currentSelectedOperation">
+        <option
+          *ngFor="let op of opStrings; let i = index"
+          [ngStyle]="{'background-color': getOptionColor(i)}"
+          [value]="i"
+          >{{op | removeDashes | titlecase}}</option>
+      </select>
+      <button (click)="operationsEnabled[currentSelectedOperation] = !operationsEnabled[currentSelectedOperation]">{{operationsEnabled[currentSelectedOperation] ? "Enabled" : "Disabled"}}</button>
+    </div>
+    <div>
+      <button (click)="toggleAll(true)">Enable All</button>
+      <button (click)="toggleAll(false)">Disable All</button>
+      <button (click)="toggleLogging()">Logging: {{ shouldLogEvents ? "On" : "Off" }}</button>
+    </div>
+
+  </div>
+
+</div>

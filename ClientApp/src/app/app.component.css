@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+.root {
+}
+
+app-call {
+  border-top: 1px solid black;
+  display: block;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center-text {
+  text-align: center !important;
+}
