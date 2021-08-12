@@ -4,7 +4,7 @@ ___
 # Interceptor App for DaVinci
 *Made with Angular*
 
-This project contains a template for capturing, or intercepting, events that flow through DaVinci. For each event that can be captured by the Interceptor API, the data that is attached can be modified before returning to DaVinci where it is trasnmitted by any other DaVinci apps that are listening.
+This project contains a template for capturing, or intercepting, events that flow through DaVinci. For each event that can be captured by the Interceptor API, the data that is attached can be modified before returning to DaVinci where it is transmitted to any other DaVinci apps that are listening.
 
 It also includes a UI which provides controls for dynamically choosing which events should be captured.
 
@@ -13,6 +13,8 @@ To begin using this application, first ensure the following tools are installed 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) version control tool
 
 - [Node Package Manager (npm)](https://nodejs.org/en/download/)
+
+- [Angular CLI](https://angular.io/cli)
 
 clone the repo from GitHub by using the following command in a command-line tool: 
 
@@ -31,7 +33,7 @@ Once all node packages have been installed, create a new application in DaVinci 
 
 ![New App](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/newapp.PNG?raw=true)
 
-3. Name the app however you like, and click "Create"
+3. Name the app and click "Create"
 
 4. The app you have just created should now appear in the apps menu. Click on 'Apps' in the menu on the left of the screen.
 
@@ -41,7 +43,7 @@ Once all node packages have been installed, create a new application in DaVinci 
 
 ![Add](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/add.PNG?raw=true)
 
-6. Click on the app you have just created and added in the 'Configured Apps' section of the page and click the blue 'More' button.
+6. The app should now appear in the 'Configured Apps' section of the page. Click on the app you have just added and click the blue 'More' button.
 
 ![More](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/more.PNG?raw=true)
 
@@ -65,16 +67,16 @@ Once all node packages have been installed, create a new application in DaVinci 
 
 ![Interceptor UI](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/interceptor.PNG?raw=true)
 
-To enable capturing of any particular event, navigate to that event and click the grey 'disabled' button to toggle capturing of that event.
+To enable capturing of any particular event, select that event and click the grey 'disabled' button to toggle capturing of that event.
 
-To log all events that come through DaVinci, click the grey 'Logging: Off' button.
+To toggle logging of all events that come through DaVinci, click the grey 'Logging: Off' button.
 
 To begin customizing the way data attached to events is processed and modified, the 'app.component.ts' file must be edited. Open the file in the editor of your choice by navigating to: 
 
 "ClientApp > src > app > app.component.ts"
 
-The .ts extension if for a "TypeScript" file. TypeScript is nearly identical to JavaScript, but contains mechanisms and syntax to that allows for static typing. Information on TypeScript can be found [here](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+The .ts extension if for a "TypeScript" file. TypeScript is nearly identical to JavaScript, but contains mechanisms and syntax that allow for static typing. Information on TypeScript can be found [here](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
-Each event that can be captured and modified has a related function in the app.component.ts file. If it is desired to modify "Interaction" data, for example, editing should begin in the "handleInteraction()" function. In each of these functions, the payload data attached to the event has already been placed in the `data` variable. Any of the fields within this object can be accessed, processed, and modified within the empty `if` block before the data is given back to DaVinci.
+Each event that can be captured and modified has a related function in the **app.component.ts** file. If it is desired to modify "Interaction" data, for example, editing should begin in the "`handleInteraction()`" function. In each of these functions, the payload data attached to the event has already been placed in the `data` variable. Any of the fields within this object can be accessed, processed, and modified within the empty `if` block before the data is given back to DaVinci.
 
 After any changes are made, rebuild the project and serve it on the same URL that was configured in DaVinci Studio. Once capturing the event is enabled within the UI, new changes should start to take effect.
