@@ -25,45 +25,45 @@ Once all node packages have been installed, create a new application in DaVinci 
 
 1. Click on 'Edit Apps' in the menu on the left of the screen.
 
-![Edit Apps](images/editapps.png)
+![Edit Apps](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/editapps.PNG?raw=true)
 
 2. Click on blue 'New App' button in the top left
 
-![New App](images/newapp.png)
+![New App](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/newapp.PNG?raw=true)
 
 3. Name the app however you like, and click "Create"
 
 4. The app you have just created should now appear in the apps menu. Click on 'Apps' in the menu on the left of the screen.
 
-![Apps](images/apps.png)
+![Apps](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/apps.PNG?raw=true)
 
 5. Click on the app that you have just created, and click the green 'Add' button.
 
-![Add](images/add.png)
+![Add](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/add.PNG?raw=true)
 
 6. Click on the app you have just created and added in the 'Configured Apps' section of the page and click the blue 'More' button.
 
-![More](images/more.png)
+![More](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/more.PNG?raw=true)
 
 7. Click on 'Config' in the left section of the menu, then click on the name of the app that appears beside it to the right. In this case, the app was named "test"
 
-![Configuration](images/config.png)
+![Configuration](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/config.PNG?raw=true)
 
 8. Edit the 'URL' string by adding the URL you plan to serve the Interceptor app on. There are two cases which will decide which URL you use:
     - If you plan to serve this app on a particular domain, put this URL as the value of the field.
     - If you plan on running the app on localhost, put the localhost URL as the value of the field. Angular runs on port 4200 by default. If you would like to see which port Angular is serving on, navigate to the 'ClientApp' folder within the repo using a command-line tool and type `ng serve`. Once the project has begun to run, Angular will print the URL it is serving on
-    ![Localhost](images/localhost.png)
+    ![Localhost](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/localhost.PNG?raw=true)
 
     In this case, the project is being served on http://localhost:4200/
-    ![URL](images/url.png)
+    ![URL](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/url.PNG?raw=true)
 
 9. Click the blue 'Save App' button in the top right.
 
-![Save APP](images/saveapp.png)
+![Save APP](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/saveapp.PNG?raw=true)
 
 10. At this point, DaVinci studio should now be configured correctly, and the Interceptor app should be running and available at the URL that was entered. Add a DaVinci Channel app and CRM app if they are not already present, and open the CRM of your choice with a softphone configured to use the DaVinci integrated experience. You should now be able to see the Interceptor UI somewhere within the interface
 
-![Interceptor UI](images/interceptor.png)
+![Interceptor UI](https://github.com/amctechnology/InterceptorAppWithUIForDaVinci/blob/master/images/interceptor.PNG?raw=true)
 
 To enable capturing of any particular event, navigate to that event and click the grey 'disabled' button to toggle capturing of that event.
 
