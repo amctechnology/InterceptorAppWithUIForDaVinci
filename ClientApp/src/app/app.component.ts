@@ -25,7 +25,9 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
   currentSelectedOperation: number;
 
-  interceptorTimeoutLimit: number = 5000;
+  interceptorTimeoutLimit: number = 10000;
+
+  appHeight = 175;
 
   isVisible = true;
   config: api.IAppConfiguration;
@@ -60,7 +62,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
       api.INTERCEPTOR_TIMEOUT_ACTION.PROCEED_WITH_ORIGINAL // Set to CANCEL to prohibit DaVinci from sending event
     );
 
-    api.setAppHeight(this.isVisible ? 175 : 0);
+    api.setAppHeight(this.isVisible ? this.appHeight : 0);
 
     console.log(this.opStrings);
 
@@ -284,24 +286,15 @@ export class AppComponent implements OnInit, AfterViewChecked {
       throw new Error(error);
     }
   }
-/**
- * data[0], contacts: IContextualContact[]
- *
- * @param payload Intercepted event data
- * @returns Returns modified payload
- */
-handleAddContextualAccessList(payload: IPayload): IPayload {
+
+  handleAddContextualAccessList(payload: IPayload): IPayload {
     let data = isResponse(payload.message) ? payload.message.request.data : payload.message.data;
     if (this.operationsEnabled[api.OPERATIONS.ADD_CONTEXTUAL_ACCESS_LIST]) {
 
     }
     return payload;
 }
-/**
- *
- * @param payload Intercepted event data
- * @returns Returns modified payload
- */
+
 handleAddPluginImage(payload: IPayload): IPayload {
     let data = isResponse(payload.message) ? payload.message.request.data : payload.message.data;
     if (this.operationsEnabled[api.OPERATIONS.ADD_PLUGIN_IMAGE]) {
@@ -309,11 +302,7 @@ handleAddPluginImage(payload: IPayload): IPayload {
     }
     return payload;
 }
-/**
- *
- * @param payload Intercepted event data
- * @returns Returns modified payload
- */
+
 handleGetBrowserName(payload: IPayload): IPayload {
     let data = isResponse(payload.message) ? payload.message.request.data : payload.message.data;
     if (this.operationsEnabled[api.OPERATIONS.GET_BROWSER_NAME]) {
@@ -321,11 +310,7 @@ handleGetBrowserName(payload: IPayload): IPayload {
     }
     return payload;
 }
-/**
- *
- * @param payload Intercepted event data
- * @returns Returns modified payload
- */
+
 handleGetCallCenterSettings(payload: IPayload): IPayload {
     let data = isResponse(payload.message) ? payload.message.request.data : payload.message.data;
     if (this.operationsEnabled[api.OPERATIONS.GET_CALL_CENTER_SETTINGS]) {
@@ -333,11 +318,7 @@ handleGetCallCenterSettings(payload: IPayload): IPayload {
     }
     return payload;
 }
-/**
- *
- * @param payload Intercepted event data
- * @returns Returns modified payload
- */
+
 handleGetCss(payload: IPayload): IPayload {
     let data = isResponse(payload.message) ? payload.message.request.data : payload.message.data;
     if (this.operationsEnabled[api.OPERATIONS.GET_CSS]) {
@@ -345,11 +326,7 @@ handleGetCss(payload: IPayload): IPayload {
     }
     return payload;
 }
-/**
- *
- * @param payload Intercepted event data
- * @returns Returns modified payload
- */
+
 handleGetLoggedIn(payload: IPayload): IPayload {
     let data = isResponse(payload.message) ? payload.message.request.data : payload.message.data;
     if (this.operationsEnabled[api.OPERATIONS.GET_LOGGED_IN]) {
@@ -357,11 +334,7 @@ handleGetLoggedIn(payload: IPayload): IPayload {
     }
     return payload;
 }
-/**
- *
- * @param payload Intercepted event data
- * @returns Returns modified payload
- */
+
 handleGetPageInfo(payload: IPayload): IPayload {
     let data = isResponse(payload.message) ? payload.message.request.data : payload.message.data;
     if (this.operationsEnabled[api.OPERATIONS.GET_PAGE_INFO]) {
@@ -369,11 +342,7 @@ handleGetPageInfo(payload: IPayload): IPayload {
     }
     return payload;
 }
-/**
- *
- * @param payload Intercepted event data
- * @returns Returns modified payload
- */
+
 handleGetParams(payload: IPayload): IPayload {
     let data = isResponse(payload.message) ? payload.message.request.data : payload.message.data;
     if (this.operationsEnabled[api.OPERATIONS.GET_PARAMS]) {
